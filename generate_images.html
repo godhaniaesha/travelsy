@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Destination Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .image-container { margin: 20px 0; }
+        canvas { border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 5px; background: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Generate Destination Images</h1>
+    <p>Click the buttons below to generate and download destination images:</p>
+    
+    <div class="image-container">
+        <button onclick="generateImage('manali', 'Manali', '#4A90E2')">Generate Manali</button>
+        <canvas id="manali" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('kashmir', 'Kashmir', '#7ED321')">Generate Kashmir</button>
+        <canvas id="kashmir" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('darjeeling', 'Darjeeling', '#50E3C2')">Generate Darjeeling</button>
+        <canvas id="darjeeling" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('kerala', 'Kerala', '#F5A623')">Generate Kerala</button>
+        <canvas id="kerala" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('coorg-ooty', 'Coorg Ooty', '#9013FE')">Generate Coorg Ooty</button>
+        <canvas id="coorg-ooty" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('rajasthan', 'Rajasthan', '#D0021B')">Generate Rajasthan</button>
+        <canvas id="rajasthan" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('pachmarhi', 'Pachmarhi', '#417505')">Generate Pachmarhi</button>
+        <canvas id="pachmarhi" width="400" height="300"></canvas>
+    </div>
+    
+    <div class="image-container">
+        <button onclick="generateImage('gujarat', 'Gujarat', '#BD10E0')">Generate Gujarat</button>
+        <canvas id="gujarat" width="400" height="300"></canvas>
+    </div>
+
+    <script>
+        function generateImage(canvasId, title, color) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, color);
+            gradient.addColorStop(1, '#333');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add some geometric shapes for visual interest
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.beginPath();
+            ctx.arc(canvas.width * 0.8, canvas.height * 0.2, 50, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(canvas.width * 0.2, canvas.height * 0.8, 30, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Add title text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(title, canvas.width / 2, canvas.height / 2);
+            
+            // Add subtitle
+            ctx.font = '16px Arial';
+            ctx.fillText('Beautiful Destination', canvas.width / 2, canvas.height / 2 + 30);
+            
+            // Download the image
+            const link = document.createElement('a');
+            link.download = canvasId + '.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.8);
+            link.click();
+        }
+    </script>
+</body>
+</html> 
