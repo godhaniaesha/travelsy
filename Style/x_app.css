@@ -550,3 +550,22 @@ body{
   max-width:100%;
   height:auto;
 }
+
+.plyr__control--overlaid {
+    background: #004f11;
+    background: #fff !important;
+    border: 0;
+    border-radius: 100%;
+    color: #004f11 !important;
+    color: var(--plyr-video-control-color, #004f11);
+    display: none;
+    left: 50%;
+    opacity: .9;
+    padding: 15px;
+    padding: calc(var(--plyr-control-spacing, 10px) * 1.5);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    z-index: 2;
+}
