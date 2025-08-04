@@ -340,7 +340,7 @@ body {
 }
 @media (max-width: 480px) {
   .z_infor_hero {
-    height: 40vh;
+    height: 60vh;
   }
   .z_infor_hero_title {
     font-size: 28px;
@@ -403,9 +403,17 @@ body {
     font-size: 26px;
   }
   .z_infor_details_row {
+    flex-wrap: wrap;
+    /* width: max-content; */
     font-size: 13px !important;
-    padding: 6px 3px !important;
+    padding: 6px 8px !important;
     gap: 2px !important;
+  }
+  .z_infor_detail svg{
+    height: 15px !important;
+  }
+  .z_infor_detail{
+    font-size: smaller;
   }
 }
 
@@ -1423,13 +1431,19 @@ body {
 
 @media (max-width: 480px) {
   .z_tour_tabs_container {
+    padding: 10px 0px;
     margin: -39px 10px 0 10px;
   }
 
   .z_tour_tab_btn {
-    padding: 7px 25px;
-    font-size: 14px;
-  }
+    padding: 7px 10px;
+    font-size: 12px;
+}
+.z_tour_day_item {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
 }
 
 /* Contact Us Page Styles */
@@ -1506,7 +1520,7 @@ body {
 /* Hero Section */
 .z_contact_hero {
   position: relative;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   height: 466px;
   background: url("../Image/Contact.png") center center/cover no-repeat;
   display: flex;
@@ -1797,7 +1811,7 @@ body {
   }
 
   .z_contact_hero {
-    height: 250px;
+    height: 222px;
   }
 
   .z_contact_hero_title {

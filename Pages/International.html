@@ -14,12 +14,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- style -->
     <link rel="stylesheet" href="../Style/z_app.css">
+    <style>
+        .z_Domestic_destination_card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+    </style>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
     <!-- Hero Section -->
-    <section class="z_Domestic_hero z_International_hero">
+    <section class="z_Domestic_hero z_International_hero pt-5">
         <div class="z_Domestic_hero_overlay">
             <div class="z_Domestic_hero_content">
                 <h1 class="z_Domestic_hero_title">International</h1>
@@ -33,7 +42,7 @@
         <div class="z_Domestic_destinations_container">
             <div class="z_Domestic_destinations_grid">
                 <!-- Destination Card 1 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                         <img src="../Image/Dubai.png" alt="Dubai">
                         <div class="z_Domestic_destination_overlay">
@@ -41,10 +50,10 @@
                             <p class="z_Domestic_destination_duration">13 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Destination Card 2 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                         <img src="../Image/Malaysia.png" alt="Malaysia">
                         <div class="z_Domestic_destination_overlay">
@@ -52,10 +61,10 @@
                             <p class="z_Domestic_destination_duration">07 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Destination Card 3 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                         <img src="../Image/Singapore.png" alt="Singapore">
                         <div class="z_Domestic_destination_overlay">
@@ -63,10 +72,10 @@
                             <p class="z_Domestic_destination_duration">13 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Destination Card 4 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                         <img src="../Image/Bali.png" alt="Bali">
                         <div class="z_Domestic_destination_overlay">
@@ -74,10 +83,10 @@
                             <p class="z_Domestic_destination_duration">13 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Destination Card 5 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                         <img src="../Image/Thailand.png" alt="Thailand">
                         <div class="z_Domestic_destination_overlay">
@@ -85,10 +94,10 @@
                             <p class="z_Domestic_destination_duration">10 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Destination Card 6 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                         <img src="../Image/vietnam.png" alt="Vietnam">
                         <div class="z_Domestic_destination_overlay">
@@ -96,10 +105,10 @@
                             <p class="z_Domestic_destination_duration">13 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Destination Card 7 -->
-                <div class="z_Domestic_destination_card">
+                <a href="Information.html" class="z_Domestic_destination_card">
                     <div class="z_Domestic_destination_image">
                             <img src="../Image/Srilanka.png" alt="Srilanka">
                         <div class="z_Domestic_destination_overlay">
@@ -107,7 +116,7 @@
                             <p class="z_Domestic_destination_duration">13 Days</p>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -118,13 +127,42 @@
     <!-- slider -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
+     <script>
         // Load header and footer
         $(document).ready(function () {
             $("#header-placeholder").load("header.html");
             $("#footer-placeholder").load("footer.html");
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $("#header-placeholder").load("header.html", function () {
+                const currentPage = window.location.pathname.split("/").pop();
+                const navLinks = document.querySelectorAll('.d_nav_link');
+    
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+<script>
+    $(document).ready(function () {
+        $("#footer-placeholder").load("footer.html", function () {
+            const currentPage = window.location.pathname.split("/").pop();
+            const footerLinks = document.querySelectorAll(".d_footer_link");
+
+            footerLinks.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>

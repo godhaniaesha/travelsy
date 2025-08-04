@@ -174,7 +174,7 @@ body {
 
 @media (max-width: 767px) {
     .d_header {
-        background: rgba(44, 62, 80, 0.95);
+        backdrop-filter: blur(10px);
     }
 
     .d_header.d_scrolled {
@@ -481,15 +481,15 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #27ae60;
-    color: #ffffff;
+    background-color: #dde6df;
+    color: #1b612a;
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .d_social_icon:hover {
-    background-color: #229954;
+    background-color: #1b612a;
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
@@ -500,6 +500,18 @@ body {
 }
 
 /* Footer Links */
+.d_footer_logo_link {
+    display: inline-block;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.d_footer_logo_link:hover {
+    color: #004F11;
+    text-decoration: none;
+}
 .d_footer_links {
     list-style: none;
     padding: 0;
@@ -518,9 +530,14 @@ body {
     position: relative;
 }
 
-.d_footer_link:hover {
+.d_footer_link:hover,
+.d_footer_link.active {
     color: #2c3e50;
     padding-left: 5px;
+}
+
+.d_footer_link.active::before {
+    width: 8px;
 }
 
 .d_footer_link::before {
@@ -530,7 +547,7 @@ body {
     top: 50%;
     width: 0;
     height: 2px;
-    background-color: #27ae60;
+    background-color: #004F11;
     transition: all 0.3s ease;
     transform: translateY(-50%);
 }
@@ -1793,11 +1810,13 @@ body {
   
   .d_EM_input:focus {
     background-color: #fff;
-    border: 1px solid #198754;
+    border: 1px solid #004F11;
     box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
     outline: none;
   }
-  
+  .btn-success{
+    background-color: #004F11;
+  }
   /* Labels and checkboxes */
   .d_EM_modal .form-label {
     font-weight: 500;
@@ -1810,12 +1829,12 @@ body {
   }
   
   .d_EM_modal .form-check-input:checked {
-    background-color: #198754;
-    border-color: #198754;
+    background-color: #004F11;
+    border-color: #004F11;
   }
   
   .d_EM_modal .form-check-input:focus {
-    border-color: #198754;
+    border-color: #004F11;
     box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
     outline: none;
   }
@@ -1825,7 +1844,12 @@ body {
     box-shadow:  0 0 0 0.2rem rgba(25, 135, 84, 0) !important;
     opacity:  0 0 0 0.2rem rgba(25, 135, 84, 0) !important; 
 }
+ .modal-backdrop.show,.modal-backdrop.fade {
+    opacity: 0.19 !important;
+}
 
+
+/* video slider  */
 .d_carousel_container {
     width: 100%;
     padding: 2rem 0;
