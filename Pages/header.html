@@ -39,19 +39,19 @@
                     id="navbarNav">
                     <ul class="d_nav_list navbar-nav mx-auto">
                         <li class="d_nav_item nav-item">
-                            <a class="d_nav_link nav-link active" href="#" aria-current="page">Home</a>
+                            <a class="d_nav_link nav-link" href="landingpage.html">Home</a>
                         </li>
                         <li class="d_nav_item nav-item">
-                            <a class="d_nav_link nav-link" href="#">Domestic</a>
+                            <a class="d_nav_link nav-link" href="Domestic.html">Domestic</a>
                         </li>
                         <li class="d_nav_item nav-item">
-                            <a class="d_nav_link nav-link" href="#">International</a>
+                            <a class="d_nav_link nav-link" href="International.html">International</a>
                         </li>
                         <li class="d_nav_item nav-item">
-                            <a class="d_nav_link nav-link" href="#">About us</a>
+                            <a class="d_nav_link nav-link" href="About_Us.html">About us</a>
                         </li>
                         <li class="d_nav_item nav-item">
-                            <a class="d_nav_link nav-link" href="#">Contact Us</a>
+                            <a class="d_nav_link nav-link" href="Contact.html">Contact Us</a>
                         </li>
                     </ul>
 
@@ -211,6 +211,20 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('hello')
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('.d_nav_link');
+    
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
