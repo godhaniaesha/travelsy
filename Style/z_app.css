@@ -1505,6 +1505,8 @@ body {
 
 /* Hero Section */
 .z_contact_hero {
+  position: relative;
+  padding-top: 100px;
   height: 466px;
   background: url("../Image/Contact.png") center center/cover no-repeat;
   display: flex;
