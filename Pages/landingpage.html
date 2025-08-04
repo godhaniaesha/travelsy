@@ -25,7 +25,8 @@
     <!-- Header -->
     <div id="header-placeholder" ></div>
  <!-- Hero Section with Main Slider -->
- <div class="x_hero_section">
+  <!-- Hero Section with Main Slider -->
+  <div class="x_hero_section">
     <div class="x_hero_content">
         <h1 class="x_hero_title">It's A Big World Out There,<br>Go Explore.</h1>
         <p class="x_hero_text">Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum
@@ -56,45 +57,34 @@
 
     <!-- Destination Cards Section (moved inside hero section) -->
     <div class="x_destinations">
-        <div class="x_container">
-            <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-2">
-                    <div class="x_destination_card x_active">
-                        <img src="../Image/img1.png" alt="Beach" class="x_dest_img">
-                        <div class="x_dest_info">
-                            <span class="x_dest_label">Get Beach</span>
-                            <h3 class="x_dest_title">Lorem beach</h3>
-                        </div>
-                    </div>
+        <div class="x_destination_cards_wrapper" style="overflow: hidden; position: absolute; right: -150px; bottom: 50px; z-index: 10; display: flex; width: 50%;">
+            <div class="x_destination_card x_active" style="margin-bottom: 20px;">
+                <img src="../Image/img1.png" alt="Beach" class="x_dest_img">
+                <div class="x_dest_info">
+                    <span class="x_dest_label">Get Beach</span>
+                    <h3 class="x_dest_title">Lorem beach</h3>
                 </div>
-                <div class="col-md-2">
-                    <div class="x_destination_card">
-                        <img src="../Image/img2.png" alt="Mountain" class="x_dest_img">
-                        <div class="x_dest_info">
-                            <span class="x_dest_label">Get Lake</span>
-                            <h3 class="x_dest_title">Lack ipsum</h3>
-                        </div>
-                    </div>
+            </div>
+            <div class="x_destination_card" style="margin-bottom: 20px;">
+                <img src="../Image/img2.png" alt="Mountain" class="x_dest_img">
+                <div class="x_dest_info">
+                    <span class="x_dest_label">Get Lake</span>
+                    <h3 class="x_dest_title">Lack ipsum</h3>
                 </div>
-                <div class="col-md-2">
-                    <div class="x_destination_card">
-                        <img src="../Image/img3.png" alt="Desert" class="x_dest_img">
-                        <div class="x_dest_info">
-                            <span class="x_dest_label">Dubai</span>
-                            <h3 class="x_dest_title">Jumeira Burj</h3>
-                        </div>
-                    </div>
+            </div>
+            <div class="x_destination_card" style="margin-bottom: 20px;">
+                <img src="../Image/img3.png" alt="Desert" class="x_dest_img">
+                <div class="x_dest_info">
+                    <span class="x_dest_label">Dubai</span>
+                    <h3 class="x_dest_title">Jumeira Burj</h3>
                 </div>
-                <!-- <div class="col-md-2">
-                    <div class="x_destination_card">
-                        <img src="../Image/img4.png" alt="Desert" class="x_dest_img">
-                        <div class="x_dest_info">
-                            <span class="x_dest_label">Dubai</span>
-                            <h3 class="x_dest_title">Jumeira Burj</h3>
-                        </div>
-                    </div>
-                </div> -->
+            </div>
+            <div class="x_destination_card">
+                <img src="../Image/img4.png" alt="Desert" class="x_dest_img">
+                <div class="x_dest_info">
+                    <span class="x_dest_label">Dubai</span>
+                    <h3 class="x_dest_title">Jumeira Burj</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -738,8 +728,8 @@
             }
         });
     </script>
-    <!-- Initialize Swiper -->
-    <script>
+     <!-- Initialize Swiper -->
+     <script>
         // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
             var swiper2 = new Swiper(".x_mySwiper2", {
@@ -747,8 +737,8 @@
                 effect: "fade",
                 loop: true,
                 autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
+                   delay: 3000,
+                   disableOnInteraction: false,
                 },
                 // navigation: {
                 //     nextEl: ".swiper-button-next",
@@ -774,6 +764,16 @@
                     // Add active class to clicked card
                     this.classList.add('x_active');
                     
+                    // Move active card to first position with smooth animation
+                    const wrapper = document.querySelector('.x_destination_cards_wrapper');
+                    const activeCard = this;
+                    
+                    // Add transition for smooth movement
+                    wrapper.style.transition = 'all 0.5s ease';
+                    
+                    // Move the active card to the beginning
+                    wrapper.insertBefore(activeCard, wrapper.firstChild);
+                    
                     // Change slide to match the card (accounting for loop)
                     swiper2.slideToLoop(index);
                 });
@@ -789,7 +789,13 @@
                 // Add active class to card matching current slide
                 const activeIndex = swiper2.realIndex;
                 if (destinationCards[activeIndex]) {
-                    destinationCards[activeIndex].classList.add('x_active');
+                    const activeCard = destinationCards[activeIndex];
+                    activeCard.classList.add('x_active');
+                    
+                    // Move active card to first position
+                    const wrapper = document.querySelector('.x_destination_cards_wrapper');
+                    wrapper.style.transition = 'all 0.5s ease';
+                    wrapper.insertBefore(activeCard, wrapper.firstChild);
                 }
             });
             
