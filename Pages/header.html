@@ -28,12 +28,15 @@
                 </a>
 
                 <!-- Mobile Toggle Button -->
-                <button class="d_toggle navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="d_toggle navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Navigation Links -->
-                <div class="d_nav collapse navbar-collapse justify-content-center align-items-center    " id="navbarNav">
+                <div class="d_nav collapse navbar-collapse justify-content-center align-items-center    "
+                    id="navbarNav">
                     <ul class="d_nav_list navbar-nav mx-auto">
                         <li class="d_nav_item nav-item">
                             <a class="d_nav_link nav-link active" href="#" aria-current="page">Home</a>
@@ -54,24 +57,113 @@
 
                     <!-- Call to Action Button -->
                     <div class="d_cta">
-                        <button class="d_enquiry_btn">Enquiry Now</button>
+                        <button class="d_enquiry_btn" data-bs-toggle="modal" data-bs-target="#dEMEnquiryModal">
+                            Enquiry Now
+                        </button>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-  
+    <!-- Enquiry Modal -->
+    <div class="modal fade d_EM_modal" id="dEMEnquiryModal" tabindex="-1" aria-labelledby="dEMModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-lg-4 p-md-2 p-1">
+                <div class="modal-header pt-0 border-0 pb-0">
+                    <h5 class="modal-title fw-semibold" id="dEMModalLabel">Submit your Enquiry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <hr class="my-2" />
+                <div class="modal-body pt-0">
+                    <form>
+                        <div class="row g-3">
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control d_EM_input" placeholder="Enter your name">
+                            </div>
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control d_EM_input" placeholder="Enter your email">
+                            </div>
+                            <!-- Phone -->
+                            <div class="col-md-6">
+                                <label class="form-label">Phone No.</label>
+                                <input type="tel" class="form-control d_EM_input" placeholder="Enter phone no.">
+                            </div>
+                            <!-- Travel Date -->
+                            <div class="col-md-6">
+                                <label class="form-label">Travel Date</label>
+                                <input type="date" class="form-control d_EM_input">
+                            </div>
+                            <!-- City -->
+                            <div class="col-md-6">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control d_EM_input" placeholder="Enter your city">
+                            </div>
+                            <!-- Passenger -->
+                            <div class="col-md-6">
+                                <label class="form-label">Total Passenger</label>
+                                <input type="number" class="form-control d_EM_input"
+                                    placeholder="Enter total no of passenger">
+                            </div>
+                        </div>
+
+                        <!-- Interests -->
+                        <div class="mt-4">
+                            <label class="form-label">Select your interest</label>
+                            <div class="d-flex flex-wrap gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                    <label class="form-check-label">Beach Holidays</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Adventure Holidays</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Nightlife Holidays</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Self Drive Holidays</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mt-4">
+                            <label class="form-label">Message</label>
+                            <textarea rows="4" class="form-control d_EM_input"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-success px-5">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- slider -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    
+
     <!-- Custom JavaScript for scroll effect and mobile menu -->
     <script>
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('.d_header');
             if (window.scrollY > 50) {
                 header.classList.add('d_scrolled');
@@ -81,14 +173,14 @@
         });
 
         // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const navbarToggler = document.querySelector('.d_toggle');
             const navbarCollapse = document.querySelector('.d_nav');
             const navLinks = document.querySelectorAll('.d_nav_link');
 
             // Close mobile menu when clicking on a link
             navLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     if (window.innerWidth <= 768) {
                         const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
                             hide: true
@@ -98,10 +190,10 @@
             });
 
             // Close mobile menu when clicking outside
-            document.addEventListener('click', function(event) {
+            document.addEventListener('click', function (event) {
                 const isClickInsideNav = navbarCollapse.contains(event.target);
                 const isClickOnToggler = navbarToggler.contains(event.target);
-                
+
                 if (!isClickInsideNav && !isClickOnToggler && navbarCollapse.classList.contains('show')) {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
                         hide: true
@@ -110,7 +202,7 @@
             });
 
             // Handle window resize
-            window.addEventListener('resize', function() {
+            window.addEventListener('resize', function () {
                 if (window.innerWidth > 768 && navbarCollapse.classList.contains('show')) {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
                         hide: true

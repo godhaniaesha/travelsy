@@ -159,13 +159,13 @@ body {
 
 /* Responsive Design */
 @media (max-width: 991.98px) {
-     
-    
+
+
     .d_cta {
         margin: 0px 0 0 0;
         text-align: center;
     }
-    
+
     .d_enquiry_btn {
         width: 100%;
         max-width: 150px;
@@ -176,23 +176,23 @@ body {
     .d_header {
         background: rgba(44, 62, 80, 0.95);
     }
-    
+
     .d_header.d_scrolled {
         background: rgba(255, 255, 255, 0.98);
     }
-    
+
     .d_navbar {
         padding: 10px 0;
     }
-    
+
     .d_header.d_scrolled .d_navbar {
         padding: 8px 0;
     }
-    
+
     .d_logo {
         font-size: 20px;
     }
-    
+
     /* Mobile Navigation Styles */
     .d_nav {
         background: rgba(44, 62, 80, 0.98);
@@ -203,32 +203,32 @@ body {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .d_header.d_scrolled .d_nav {
         background: rgba(255, 255, 255, 0.98);
         border: 1px solid rgba(44, 62, 80, 0.1);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-    
+
     .d_nav_list {
         gap: 0;
         margin: 0;
         padding: 0;
     }
-    
+
     .d_nav_item {
         margin: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .d_header.d_scrolled .d_nav_item {
         border-bottom: 1px solid rgba(44, 62, 80, 0.1);
     }
-    
+
     .d_nav_item:last-child {
         border-bottom: none;
     }
-    
+
     .d_nav_link {
         color: #ffffff !important;
         font-size: 16px;
@@ -241,11 +241,11 @@ body {
         transition: all 0.3s ease;
         position: relative;
     }
-    
+
     .d_header.d_scrolled .d_nav_link {
         color: #2c3e50 !important;
     }
-    
+
     /* Mobile Active State */
     .d_nav_link.active {
         color: #ffffff !important;
@@ -253,12 +253,12 @@ body {
         border-radius: 8px;
         margin: 5px 0;
     }
-    
+
     .d_header.d_scrolled .d_nav_link.active {
         color: #2c3e50 !important;
         background: rgba(44, 62, 80, 0.1);
     }
-    
+
     /* Mobile Hover State */
     .d_nav_link:hover {
         color: #ffffff !important;
@@ -267,23 +267,23 @@ body {
         margin: 5px 0;
         transform: translateX(5px);
     }
-    
+
     .d_header.d_scrolled .d_nav_link:hover {
         color: #2c3e50 !important;
         background: rgba(44, 62, 80, 0.15);
     }
-    
+
     /* Remove underline effects on mobile */
     .d_nav_link::before,
     .d_nav_link::after {
         display: none;
     }
-    
+
     .d_cta {
         margin: 20px 0 0 0;
         text-align: center;
     }
-    
+
     .d_enquiry_btn {
         width: 100%;
         max-width: 250px;
@@ -293,22 +293,22 @@ body {
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
-    
+
     .d_header.d_scrolled .d_enquiry_btn {
         background: rgba(44, 62, 80, 0.1);
         border: 1px solid rgba(44, 62, 80, 0.3);
     }
-    
+
     .d_enquiry_btn:hover {
         background: rgba(255, 255, 255, 0.2);
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
-    
+
     .d_header.d_scrolled .d_enquiry_btn:hover {
         background: rgba(44, 62, 80, 0.2);
     }
-    
+
     /* Mobile Toggle Button Enhancement */
     .d_toggle {
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -317,17 +317,17 @@ body {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
     }
-    
+
     .d_header.d_scrolled .d_toggle {
         border: 1px solid rgba(44, 62, 80, 0.3);
         background: rgba(44, 62, 80, 0.1);
     }
-    
+
     .d_toggle:hover {
         background: rgba(255, 255, 255, 0.2);
         border-color: rgba(255, 255, 255, 0.5);
     }
-    
+
     .d_header.d_scrolled .d_toggle:hover {
         background: rgba(44, 62, 80, 0.2);
         border-color: rgba(44, 62, 80, 0.5);
@@ -338,20 +338,20 @@ body {
     .d_logo {
         font-size: 18px;
     }
-    
+
     .d_navbar {
         padding: 8px 0;
     }
-    
+
     .d_header.d_scrolled .d_navbar {
         padding: 6px 0;
     }
-    
+
     .d_nav_link {
         font-size: 15px;
         padding: 12px 0 !important;
     }
-    
+
     .d_enquiry_btn {
         padding: 10px 20px;
         font-size: 14px;
@@ -362,27 +362,27 @@ body {
     .d_logo {
         font-size: 16px;
     }
-    
+
     .d_logo i {
         margin-right: 5px;
     }
-    
+
     .d_nav {
         margin-top: 10px;
         padding: 15px;
     }
-    
+
     .d_nav_link {
         font-size: 14px;
         padding: 10px 0 !important;
     }
-    
+
     .d_enquiry_btn {
         padding: 8px 18px;
         font-size: 13px;
         max-width: 200px;
     }
-    
+
     .d_toggle {
         padding: 6px 10px;
     }
@@ -413,6 +413,7 @@ body {
 .d_nav_link.active::before {
     width: 100%;
 }
+
 /* When header is scrolled: change active link color and underline */
 .d_header.d_scrolled .d_nav_link.active {
     color: #1b1515 !important;
@@ -647,17 +648,17 @@ body {
     .d_footer_main {
         padding: 50px 0 30px;
     }
-    
+
     .d_footer_column {
         margin-bottom: 25px;
     }
-    
+
     .d_travel_items {
         width: 150px;
         height: 120px;
         opacity: 0.12;
     }
-    
+
     .d_mountain_illustration {
         width: 250px;
         height: 160px;
@@ -669,63 +670,63 @@ body {
     .d_footer_main {
         padding: 40px 0 25px;
     }
-    
+
     .d_footer_column {
         margin-bottom: 20px;
     }
-    
+
     .d_footer_heading {
         font-size: 16px;
         margin-bottom: 15px;
     }
-    
+
     .d_footer_text {
         font-size: 13px;
         margin-bottom: 15px;
     }
-    
+
     .d_social_icons {
         gap: 12px;
         justify-content: flex-start;
     }
-    
+
     .d_social_icon {
         width: 35px;
         height: 35px;
     }
-    
+
     .d_social_icon i {
         font-size: 14px;
     }
-    
+
     .d_footer_link {
         font-size: 13px;
     }
-    
+
     .d_newsletter_input {
         padding: 10px 12px;
         font-size: 13px;
     }
-    
+
     .d_subscribe_btn {
         padding: 10px 15px;
         font-size: 13px;
     }
-    
+
     .d_newsletter_text {
         font-size: 11px;
     }
-    
+
     .d_copyright_text {
         font-size: 13px;
     }
-    
+
     .d_travel_items {
         width: 120px;
         height: 100px;
         opacity: 0.08;
     }
-    
+
     .d_mountain_illustration {
         width: 200px;
         height: 130px;
@@ -737,49 +738,49 @@ body {
     .d_footer_main {
         padding: 30px 0 20px;
     }
-    
+
     .d_footer_column {
         margin-bottom: 20px;
         text-align: center;
     }
-    
+
     .d_social_icons {
         justify-content: center;
         gap: 10px;
     }
-    
+
     .d_social_icon {
         width: 32px;
         height: 32px;
     }
-    
+
     .d_social_icon i {
         font-size: 13px;
     }
-    
+
     .d_input_group {
         flex-direction: column;
         border-radius: 8px;
         max-width: 280px;
         margin: 0 auto 15px;
     }
-    
+
     .d_newsletter_input {
         border-radius: 8px 8px 0 0;
         padding: 12px 15px;
     }
-    
+
     .d_subscribe_btn {
         border-radius: 0 0 8px 8px;
         padding: 12px 15px;
     }
-    
+
     .d_travel_items {
         width: 100px;
         height: 80px;
         opacity: 0.06;
     }
-    
+
     .d_mountain_illustration {
         width: 150px;
         height: 100px;
@@ -791,49 +792,49 @@ body {
     .d_footer_main {
         padding: 25px 0 15px;
     }
-    
+
     .d_footer_heading {
         font-size: 15px;
         margin-bottom: 12px;
     }
-    
+
     .d_footer_text {
         font-size: 12px;
         margin-bottom: 12px;
     }
-    
+
     .d_footer_link {
         font-size: 12px;
     }
-    
+
     .d_input_group {
         max-width: 250px;
     }
-    
+
     .d_newsletter_input {
         font-size: 12px;
         padding: 10px 12px;
     }
-    
+
     .d_subscribe_btn {
         font-size: 12px;
         padding: 10px 12px;
     }
-    
+
     .d_newsletter_text {
         font-size: 10px;
     }
-    
+
     .d_copyright_text {
         font-size: 12px;
     }
-    
+
     .d_travel_items {
         width: 80px;
         height: 60px;
         opacity: 0.05;
     }
-    
+
     .d_mountain_illustration {
         width: 120px;
         height: 80px;
@@ -846,66 +847,66 @@ body {
     .d_footer_main {
         padding: 20px 0 10px;
     }
-    
+
     .d_footer_column {
         margin-bottom: 15px;
     }
-    
+
     .d_footer_heading {
         font-size: 14px;
         margin-bottom: 10px;
     }
-    
+
     .d_footer_text {
         font-size: 11px;
         margin-bottom: 10px;
     }
-    
+
     .d_social_icons {
         gap: 8px;
     }
-    
+
     .d_social_icon {
         width: 28px;
         height: 28px;
     }
-    
+
     .d_social_icon i {
         font-size: 12px;
     }
-    
+
     .d_footer_link {
         font-size: 11px;
     }
-    
+
     .d_input_group {
         max-width: 220px;
     }
-    
+
     .d_newsletter_input {
         font-size: 11px;
         padding: 8px 10px;
     }
-    
+
     .d_subscribe_btn {
         font-size: 11px;
         padding: 8px 10px;
     }
-    
+
     .d_newsletter_text {
         font-size: 9px;
     }
-    
+
     .d_copyright_text {
         font-size: 11px;
     }
-    
+
     .d_travel_items {
         width: 60px;
         height: 45px;
         opacity: 0.03;
     }
-    
+
     .d_mountain_illustration {
         width: 100px;
         height: 65px;
@@ -925,9 +926,11 @@ body {
     position: relative;
     z-index: 2;
 }
+
 .d_LP_section .row {
     min-height: 100%;
 }
+
 /* Image Collage Styles */
 /* Container for image collage */
 .d_LP_image_collage {
@@ -935,7 +938,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* optional: vertical center */
+    justify-content: center;
+    /* optional: vertical center */
     /* flex-wrap: wrap; */
 }
 
@@ -1005,12 +1009,15 @@ body {
     overflow: hidden;
     padding: 10px;
 }
+
 .d_LP_content {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* optional: vertical center */
+    justify-content: center;
+    /* optional: vertical center */
 }
+
 /* Content Area Styles */
 .d_LP_content {
     padding: 40px 0;
@@ -1110,7 +1117,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 30% 30%, transparent 0, transparent 2px, rgba(144, 238, 144, 0.3) 2px, rgba(144, 238, 144, 0.3) 3px, transparent 3px),
         radial-gradient(circle at 70% 60%, transparent 0, transparent 2px, rgba(144, 238, 144, 0.3) 2px, rgba(144, 238, 144, 0.3) 3px, transparent 3px),
         radial-gradient(circle at 80% 20%, transparent 0, transparent 2px, rgba(144, 238, 144, 0.3) 2px, rgba(144, 238, 144, 0.3) 3px, transparent 3px);
@@ -1136,19 +1143,20 @@ body {
     .d_LP_section {
         padding: 60px 0 60px;
     }
-    
+
     .d_LP_title {
         font-size: 32px;
     }
-    
+
     .d_LP_image_collage {
         height: 450px;
     }
-    
+
     .d_LP_right_image {
         /* width: 35%; */
         height: 280px;
     }
+
     .d_LP_enquiry_button {
         position: absolute;
         top: 52%;
@@ -1162,26 +1170,26 @@ body {
     .d_LP_section {
         padding: 40px 0 40px;
     }
-    
-    
+
+
     .d_LP_button_circle {
         width: 130px;
         height: 130px;
     }
-    
+
     .d_LP_button_circle i {
         font-size: 20px;
     }
-    
+
     .d_LP_button_text_top,
     .d_LP_button_text_bottom {
         font-size: 9px;
     }
-    
+
     .d_LP_title {
         font-size: 28px;
     }
-    
+
     .d_LP_text {
         font-size: 15px;
     }
@@ -1191,27 +1199,27 @@ body {
     .d_LP_section {
         padding: 70px 0 10px;
     }
-    
+
     .d_LP_image_collage {
         height: 350px;
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .d_LP_top_image,
     .d_LP_bottom_image {
         width: 100%;
         height: 50%;
         flex: 1;
     }
-    
+
     .d_LP_right_image {
         width: 100%;
         height: 400px;
         position: relative;
         order: 3;
     }
-    
+
     .d_LP_enquiry_button {
         position: relative;
         top: -3%;
@@ -1219,52 +1227,55 @@ body {
         transform: none;
         order: 4;
     }
-    
+
     .d_LP_button_circle {
         width: 120px;
         height: 120px;
     }
-    
+
     .d_LP_button_circle i {
         font-size: 18px;
     }
+
     .d_LP_image_collage .col-6:first-child .d-flex {
         height: 100%;
         max-height: 333px;
     }
+
     .d_LP_button_text_top,
     .d_LP_button_text_bottom {
         font-size: 8px;
     }
-    
+
     .d_LP_title {
         font-size: 24px;
         /* text-align: center; */
     }
-    
+
     .d_LP_subtitle {
         /* text-align: center; */
     }
-    
+
     .d_LP_text {
         /* text-align: center; */
         margin-bottom: 10px;
         font-size: 14px;
     }
-    
+
     .d_LP_read_more_btn {
         display: block;
         margin: 0 0;
         width: fit-content;
     }
-    
+
     .d_LP_bg_graphics {
         display: none;
     }
-    
+
     .d_LP_abstract_design {
         display: none;
     }
+
     .d_LP_content {
         padding: 40px 0;
     }
@@ -1274,14 +1285,16 @@ body {
     .d_LP_section {
         padding: 70px 0 20px;
     }
-   
+
     .d_LP_content {
         padding: 20px 0 15px;
     }
+
     .d_LP_image_collage {
         height: 300px;
         gap: 0px;
     }
+
     .d_LP_enquiry_button {
         position: relative;
         top: -3%;
@@ -1289,42 +1302,44 @@ body {
         transform: none;
         order: 4;
     }
+
     .d_LP_top_image,
     .d_LP_bottom_image {
         height: 50%;
         flex: 1;
     }
-    
+
     .d_LP_right_image {
         height: 400px;
     }
-    
+
     .d_LP_button_circle {
         width: 125px;
         height: 125px;
     }
-    
+
     .d_LP_button_circle i {
         font-size: 16px;
     }
-    
+
     .d_LP_button_text_top,
     .d_LP_button_text_bottom {
         font-size: 7px;
     }
-    
+
     .d_LP_title {
         font-size: 20px;
     }
-    
+
     .d_LP_text {
         font-size: 13px;
     }
-    
+
     .d_LP_read_more_btn {
         padding: 10px 25px;
         font-size: 14px;
     }
+
     .d_LP_image_collage .col-6:first-child .d-flex {
         height: 100%;
         max-height: 333px;
@@ -1335,6 +1350,7 @@ body {
     .d_LP_section {
         padding: 80px 0 25px;
     }
+
     .d_LP_content {
         padding: 37px 0 8px;
     }
@@ -1343,10 +1359,12 @@ body {
         height: 100%;
         min-height: 300px;
     }
-        .d_LP_image_collage {
+
+    .d_LP_image_collage {
         height: 200px;
         gap: 0px;
     }
+
     .d_LP_enquiry_button {
         position: relative;
         top: -3%;
@@ -1354,32 +1372,34 @@ body {
         transform: none;
         order: 4;
     }
+
     .d_LP_top_image,
     .d_LP_bottom_image {
         height: 50%;
         flex: 1;
     }
-    
+
     .d_LP_right_image {
-        height:333px;
+        height: 333px;
     }
-    
+
     .d_LP_button_circle {
         width: 100px;
         height: 100px;
     }
-    
-    
+
+
     .d_LP_read_more_btn {
         padding: 8px 20px;
         font-size: 13px;
     }
 }
 
-@media (max-width:320px){
+@media (max-width:320px) {
     .d_LP_right_image {
-        height:305px;
+        height: 305px;
     }
+
     .d_LP_enquiry_button {
         position: relative;
         top: -1%;
@@ -1387,7 +1407,7 @@ body {
         transform: none;
         order: 4;
     }
-   
+
 }
 
 /* OUR SERVICES Section */
@@ -1417,12 +1437,14 @@ body {
 }
 
 .d_OS_card h5 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
     margin-bottom: 0.5rem;
 }
 
 .d_OS_card p {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    /* 16px */
     line-height: 1.5;
 }
 
@@ -1512,6 +1534,7 @@ body {
         height: 100%;
         border-radius: 6px 25px;
     }
+
     .d_OS_icon_box {
         width: 65px;
         height: 65px;
@@ -1548,6 +1571,7 @@ body {
         height: 100%;
         border-radius: 5px 15px;
     }
+
     .d_OS_icon_box {
         width: 60px;
         height: 60px;
@@ -1571,12 +1595,14 @@ body {
     .d_OS_card p {
         font-size: 0.85rem;
     }
-    .d_OS_services_section .col-6{
+
+    .d_OS_services_section .col-6 {
         width: 50% !important;
     }
 }
-@media (max-width:425px){
-    .d_OS_services_section .col-6{
+
+@media (max-width:425px) {
+    .d_OS_services_section .col-6 {
         width: 100% !important;
     }
 }
@@ -1584,70 +1610,70 @@ body {
 /* WHY CHOOSE US Section */
 .d_WC_section {
     background-color: #fefefe;
-  }
-  
-  /* Responsive Heading */
-  .d_WC_heading {
+}
+
+/* Responsive Heading */
+.d_WC_heading {
     font-size: clamp(1.5rem, 2.5vw, 2.2rem);
     line-height: 1.3;
-  }
-  
-  /* Subheading */
-  .d_WC_section h6 {
+}
+
+/* Subheading */
+.d_WC_section h6 {
     font-size: clamp(0.85rem, 1.2vw, 1rem);
     color: #004F11;
-  }
-  
-  /* Paragraph text */
-  .d_WC_section p {
+}
+
+/* Paragraph text */
+.d_WC_section p {
     font-size: clamp(0.85rem, 1.3vw, 1rem);
     line-height: 1.6;
-  }
-  
-  /* List Items */
-  .d_WC_list li {
+}
+
+/* List Items */
+.d_WC_list li {
     font-size: clamp(0.9rem, 1.5vw, 1rem);
     margin-bottom: 0.5rem;
     font-weight: 500;
-  }
-  
-  .d_WC_list i {
+}
+
+.d_WC_list i {
     color: #004F11;
-  }
-  
-  /* Images Container */
-  .d_WC_images {
+}
+
+/* Images Container */
+.d_WC_images {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Optional image if used */
-  .d_WC_img_back {
+}
+
+/* Optional image if used */
+.d_WC_img_back {
     max-width: 75%;
     transform: rotate(-8deg);
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Front image or button wrapper */
-  .d_WC_img_front_wrapper {
+}
+
+/* Front image or button wrapper */
+.d_WC_img_front_wrapper {
     position: absolute;
     top: 79%;
     left: 45%;
     transform: translate(-30%, -50%);
-  }
-  
-  /* Optional image if used */
-  .d_WC_img_front {
+}
+
+/* Optional image if used */
+.d_WC_img_front {
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Explore Button Style */
-  .d_WC_explore_btn {
+}
+
+/* Explore Button Style */
+.d_WC_explore_btn {
     text-wrap: nowrap;
     position: absolute;
     bottom: 12px;
@@ -1655,33 +1681,147 @@ body {
     font-size: clamp(0.8rem, 1vw, 0.95rem);
     padding: 0.3rem 1rem;
     border-radius: 4px;
-  }
-  
-  /* Solid green button */
-  .d_WC_btn_success {
+}
+
+/* Solid green button */
+.d_WC_btn_success {
     background-color: #004F11;
     border: 1px solid #004F11;
     color: #fff;
     font-size: clamp(0.8rem, 1vw, 0.95rem);
-  }
-  
-  .d_WC_btn_success:hover {
+}
+
+.d_WC_btn_success:hover {
     background-color: #003c0d;
     border-color: #003c0d;
     color: #fff;
-  }
-  
-  /* Outline green button */
-  .d_WC_btn_outline_success {
+}
+
+/* Outline green button */
+.d_WC_btn_outline_success {
     background-color: transparent;
     color: #004F11;
     border: 1px solid #004F11;
     font-size: clamp(0.8rem, 1vw, 0.95rem);
-  }
-  
-  .d_WC_btn_outline_success:hover {
+}
+
+.d_WC_btn_outline_success:hover {
     background-color: #004F11;
     color: #fff;
     border-color: #004F11;
+}
+
+.d_g_dest_section {
+    background: linear-gradient(to bottom, #f5f9f8 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
   }
   
+  .d_g_card {
+    height: 220px;
+  }
+  
+  .d_g_card_vertical {
+    height: 464px;
+  }
+  
+  @media (max-width: 991px) {
+    .d_g_card_vertical {
+      height: 220px;
+      margin-top: 0 !important;
+    }
+  }
+  
+  .d_g_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  }
+  
+  .d_g_bg_airplane {
+    position: absolute;
+    top: 0%;
+    right: 21%;
+    width: 180px;
+    opacity: 1;
+    z-index: 0;
+}
+  
+  .d_g_bg_dots
+ {
+    width: 80px;
+    position: absolute;
+    bottom: -7%;
+    right: -3%;
+    opacity: 1;
+    z-index: -2;
+}
+  
+  .d_g_dest_section .container {
+    position: relative;
+    z-index: 1;
+  }
+  /* Enquiry Modal */
+/* Modal content padding and style */
+.d_EM_modal .modal-content {
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .d_EM_modal .modal-content {
+      padding: 1rem;
+    }
+    .d_EM_modal .modal-dialog {
+        width: 80%;
+        margin: 10px auto; 
+    }
+  }
+  
+  /* Input fields */
+  .d_EM_input {
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .d_EM_input:focus {
+    background-color: #fff;
+    border: 1px solid #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+    outline: none;
+  }
+  
+  /* Labels and checkboxes */
+  .d_EM_modal .form-label {
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  
+  .d_EM_modal .form-check-label {
+    font-weight: 400;
+    font-size: 0.92rem;
+  }
+  
+  .d_EM_modal .form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+  }
+  
+  .d_EM_modal .form-check-input:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+    outline: none;
+  }
+  .d_EM_modal .btn-close:focus
+ {
+    outline: 0;
+    box-shadow:  0 0 0 0.2rem rgba(25, 135, 84, 0) !important;
+    opacity:  0 0 0 0.2rem rgba(25, 135, 84, 0) !important; 
+}
