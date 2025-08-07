@@ -22,7 +22,7 @@
         <div class="z_contact_hero_overlay"></div>
         <div class="z_contact_hero_content">
             <h1 class="z_contact_hero_title">Contact Us</h1>
-            <p class="z_contact_hero_breadcrumb">Home / Contact Us</p>
+            <p class="z_contact_hero_breadcrumb"><a href="landingpage.html" style="text-decoration:none;color:inherit;">Home</a> / Contact Us</p>
         </div>
     </section>
 
@@ -50,35 +50,35 @@
                     <!-- Contact Form Section -->
                     <div class="col-lg-7 col-md-12 mb-4">
                         <div class="z_contact_form">
-                            <form>
+                            <form id="contactForm" novalidate>
                                 <div class="row">
                                     <div class="mb-3">
                                         <label for="name" class="z_contact_form_label">Name</label>
-                                        <input type="text" class="z_contact_form_input" id="name"
-                                            placeholder="Enter your name">
+                                        <input type="text" class="z_contact_form_input" id="name" name="name" placeholder="Enter your name" required minlength="2">
+                                        <div class="invalid-feedback">Please enter your name (at least 2 characters).</div>
                                     </div>
-                                    <div class=" mb-3">
+                                    <div class="mb-3">
                                         <label for="email" class="z_contact_form_label">Email</label>
-                                        <input type="email" class="z_contact_form_input" id="email"
-                                            placeholder="Enter your email">
+                                        <input type="email" class="z_contact_form_input" id="email" name="email" placeholder="Enter your email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="phone" class="z_contact_form_label">Phone No.</label>
-                                        <input type="tel" class="z_contact_form_input" id="phone"
-                                            placeholder="Enter your phone no">
+                                        <input type="tel" class="z_contact_form_input" id="phone" name="phone" placeholder="Enter your phone no" required pattern="[0-9]{10,15}">
+                                        <div class="invalid-feedback">Please enter a valid phone number (10-15 digits).</div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="city" class="z_contact_form_label">City</label>
-                                        <input type="text" class="z_contact_form_input" id="city"
-                                            placeholder="Enter your city">
+                                        <input type="text" class="z_contact_form_input" id="city" name="city" placeholder="Enter your city" required>
+                                        <div class="invalid-feedback">Please enter your city.</div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="z_contact_form_label">Message</label>
-                                    <textarea class="z_contact_form_textarea" id="message" rows="4"
-                                        placeholder="Enter your message"></textarea>
+                                    <textarea class="z_contact_form_textarea" id="message" name="message" rows="4" placeholder="Enter your message" required minlength="5"></textarea>
+                                    <div class="invalid-feedback">Please enter your message (at least 5 characters).</div>
                                 </div>
                                 <div class="z_contact_form_btn_parent">
                                     <button type="submit" class="z_contact_form_btn">Send Message</button>
@@ -163,6 +163,67 @@
     });
 </script>
 
+    <script>
+        $(document).ready(function () {
+            // Contact form validation
+            $('#contactForm').on('submit', function (e) {
+                var isValid = true;
+                var name = $('#name');
+                var email = $('#email');
+                var phone = $('#phone');
+                var city = $('#city');
+                var message = $('#message');
+
+                // Name validation
+                if (name.val().trim().length < 2) {
+                    name.addClass('is-invalid');
+                    isValid = false;
+                } else {
+                    name.removeClass('is-invalid');
+                }
+                // Email validation
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email.val().trim())) {
+                    email.addClass('is-invalid');
+                    isValid = false;
+                } else {
+                    email.removeClass('is-invalid');
+                }
+                // Phone validation
+                var phonePattern = /^[0-9]{10,15}$/;
+                if (!phonePattern.test(phone.val().trim())) {
+                    phone.addClass('is-invalid');
+                    isValid = false;
+                } else {
+                    phone.removeClass('is-invalid');
+                }
+                // City validation
+                if (city.val().trim() === '') {
+                    city.addClass('is-invalid');
+                    isValid = false;
+                } else {
+                    city.removeClass('is-invalid');
+                }
+                // Message validation
+                if (message.val().trim().length < 5) {
+                    message.addClass('is-invalid');
+                    isValid = false;
+                } else {
+                    message.removeClass('is-invalid');
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+                } else {
+                    alert('Thank you for contacting us!');
+                }
+            });
+            // Remove error on input
+            $('#contactForm input, #contactForm textarea').on('input', function () {
+                $(this).removeClass('is-invalid');
+            });
+        });
+    </script>
     
 </body>
 

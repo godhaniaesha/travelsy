@@ -84,7 +84,7 @@
 
         .d_TS_star {
             color: #ffc107;
-            font-size: 24px;
+            font-size: 30px;
         }
 
         .d_TS_slider-container {
@@ -235,7 +235,7 @@
         <h1 class="x_hero_title">It's A Big World Out There,<br>Go Explore.</h1>
         <p class="x_hero_text">Lorem ipsum is simply dummy text of the printing and typesetting industry.Lorem ipsum
             has been the industry's stan</p>
-        <button class="x_explore_btn">Explore More</button>
+        <a href="Information.html"><button class="x_explore_btn">Explore More</button></a>
     </div>
     <div class="x_main">
         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper x_mySwiper2">
@@ -349,7 +349,7 @@
                                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
                                 architecto beatae vitae dicta sunt explicabo.</p>
                         </div>
-                        <button class="d_LP_read_more_btn">Read More</button>
+                       <a href="About_Us.html"><button class="d_LP_read_more_btn">Read More</button></a>
 
                         <!-- Background Graphics -->
                         <div class="d_LP_bg_graphics">
@@ -392,7 +392,7 @@
                     <div class="d_OS_card text-center p-4 bg-white shadow-sm h-100 rounded-4 position-relative">
                         <div class="d_OS_icon_box position-relative mx-auto mb-4">
                             <div class="d_OS_icon_bg"></div>
-                            <img src="../Image/icon (2).png" alt="Explore the world" class="d_OS_icon_positioned">
+                            <img src="../Image/icon (4).png" alt="Explore the world" class="d_OS_icon_positioned">
                         </div>
                         <h5 class="fw-semibold">Best Flight Options</h5>
                         <p class="mb-0 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -414,7 +414,7 @@
                     <div class="d_OS_card text-center p-4 bg-white shadow-sm h-100 rounded-4 position-relative">
                         <div class="d_OS_icon_box position-relative mx-auto mb-4">
                             <div class="d_OS_icon_bg"></div>
-                            <img src="../Image/icon (4).png" alt="Explore the world" class="d_OS_icon_positioned">
+                            <img src="../Image/icon (2).png" alt="Explore the world" class="d_OS_icon_positioned">
                         </div>
                         <h5 class="fw-semibold">Cost Efficient</h5>
                         <p class="mb-0 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -452,12 +452,12 @@
                             <div class="col-6">
                                 <ul class="list-unstyled d_WC_list mb-3">
                                     <li><i class="fa fa-check me-2" style="color: #004F11;"></i>Best Guide</li>
-                                    <li><i class="fa fa-check me-2" style="color: #004F11;"></i>Best Travel Agency</li>
+                                    <li class="d-flex gap-2"><i class="fa fa-check mt-1" style="color: #004F11;"></i><p class="mb-0">Best Travel Agency</p></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <button class="btn d_WC_btn_outline_success mt-2">Contact Us</button>
+                        <a href="Contact.html"><button class="btn d_WC_btn_outline_success mt-2">Contact Us</button></a>
                     </div>
                 </div>
 
@@ -654,8 +654,8 @@
       
       
       <div class="d_TS_testimonial-container">
-        <button class="d_TS_nav-arrow left">‹</button>
-        <button class="d_TS_nav-arrow right">›</button>
+        <button class="d_TS_nav-arrow left"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="d_TS_nav-arrow right"><i class="fa-solid fa-chevron-right"></i></button>
         
         <div class="d_TS_testimonial-header">
             <div class="d_TS_testimonial-label">TESTIMONIAL</div>
@@ -1102,10 +1102,7 @@
                 spaceBetween: 0,
                 effect: "fade",
                 loop: true,
-                autoplay: {
-                   delay: 3000,
-                   disableOnInteraction: false,
-                },
+             
                 // navigation: {
                 //     nextEl: ".swiper-button-next",
                 //     prevEl: ".swiper-button-prev",
