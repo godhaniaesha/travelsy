@@ -82,33 +82,40 @@
                             <!-- Name -->
                             <div class="col-md-6">
                                 <label class="form-label">Name</label>
-                                <input type="text" class="form-control d_EM_input" placeholder="Enter your name">
+                                <input type="text" class="form-control d_EM_input" placeholder="Enter your name"
+                                    required>
                             </div>
                             <!-- Email -->
                             <div class="col-md-6">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control d_EM_input" placeholder="Enter your email">
+                                <input type="email" class="form-control d_EM_input" placeholder="Enter your email"
+                                    required>
                             </div>
                             <!-- Phone -->
                             <div class="col-md-6">
                                 <label class="form-label">Phone No.</label>
-                                <input type="tel" class="form-control d_EM_input" placeholder="Enter phone no.">
+                                <!-- <input type="tel" class="form-control d_EM_input" placeholder="Enter phone no."
+                                    required> -->
+                                <input type="tel" class="form-control d_EM_input" placeholder="Enter phone no."
+                                    maxlength="10" pattern="[0-9]{10}"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
                             </div>
                             <!-- Travel Date -->
                             <div class="col-md-6">
                                 <label class="form-label">Travel Date</label>
-                                <input type="date" class="form-control d_EM_input">
+                                <input type="date" class="form-control d_EM_input" required>
                             </div>
                             <!-- City -->
                             <div class="col-md-6">
                                 <label class="form-label">City</label>
-                                <input type="text" class="form-control d_EM_input" placeholder="Enter your city">
+                                <input type="text" class="form-control d_EM_input" placeholder="Enter your city"
+                                    required>
                             </div>
                             <!-- Passenger -->
                             <div class="col-md-6">
                                 <label class="form-label">Total Passenger</label>
                                 <input type="number" class="form-control d_EM_input"
-                                    placeholder="Enter total no of passenger">
+                                    placeholder="Enter total no of passenger" required>
                             </div>
                         </div>
 
@@ -138,8 +145,8 @@
                         <!-- Message -->
                         <div class="mt-4">
                             <label class="form-label">Message</label>
-                            <textarea rows="4" class="form-control d_EM_input"
-                                placeholder="Enter your message"></textarea>
+                            <textarea rows="4" class="form-control d_EM_input" placeholder="Enter your message"
+                                required></textarea>
                         </div>
 
                         <!-- Submit -->
@@ -216,7 +223,7 @@
             alert('hello')
             const currentPage = window.location.pathname.split("/").pop();
             const navLinks = document.querySelectorAll('.d_nav_link');
-    
+
             navLinks.forEach(link => {
                 if (link.getAttribute('href') === currentPage) {
                     link.classList.add('active');
@@ -224,7 +231,49 @@
             });
         });
     </script>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const enquiryForm = document.querySelector('#dEMEnquiryModal form');
+
+            enquiryForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // stop normal submission
+
+                let isValid = true;
+                let phoneInput = enquiryForm.querySelector('input[type="tel"]');
+                let emailInput = enquiryForm.querySelector('input[type="email"]');
+
+                // Check required fields
+                enquiryForm.querySelectorAll('[required]').forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
+                });
+
+                // Extra: validate phone number
+                if (!/^\d{10}$/.test(phoneInput.value)) {
+                    phoneInput.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                // Extra: validate email format
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                    emailInput.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    enquiryForm.reset();
+                    bootstrap.Modal.getInstance(document.getElementById('dEMEnquiryModal')).hide();
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
